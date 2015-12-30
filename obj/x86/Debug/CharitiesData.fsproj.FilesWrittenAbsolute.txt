@@ -1,0 +1,6 @@
+/Users/admin/Projects/CharitiesData/CharitiesData/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.fs
+/Users/admin/Projects/CharitiesData/CharitiesData/bin/Debug/CharitiesData.exe.mdb
+/Users/admin/Projects/CharitiesData/CharitiesData/bin/Debug/CharitiesData.exe
+/Users/admin/Projects/CharitiesData/CharitiesData/obj/x86/Debug/CharitiesData.exe
+/Users/admin/Projects/CharitiesData/CharitiesData/obj/x86/Debug/CharitiesData.exe.mdb
+/Users/admin/Projects/CharitiesData/CharitiesData/bin/Debug/FSharp.Data.dll
