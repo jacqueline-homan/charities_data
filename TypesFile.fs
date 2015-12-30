@@ -28,9 +28,8 @@ module Types =
     and Outcome =
         | Helped // Terminal case #1
         | NotHelped // Terminal case #2
-        | RefToNextNgo //Caller will be prompted for help info again
+        | RefToNextNgo of Outcome * NGO //Caller will be prompted for help info again
 
-    and RefToNextNgo = RefToNextNgo of Outcome * NGO
 
     type Call = Call of Caller * Outcome
 

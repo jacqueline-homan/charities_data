@@ -7,6 +7,8 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>CharitiesData</RootNamespace>
     <AssemblyName>CharitiesData</AssemblyName>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,9 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="TypesFile.fs" />
     <Compile Include="ReportBuilder.fs" />
     <Compile Include="Program.fs" />
-    <Compile Include="TypesFile.fs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.1\Framework\v4.0\Microsoft.FSharp.Targets" />
   <ItemGroup>

@@ -16,7 +16,13 @@ module ReportBuilder =
                printfn "Enter 'individual' or 'org': "
                caller category
      
-
+    let createNgo name = 
+        { OrgName = name;
+          EIN = 0;
+          City = "";
+          State = "";
+          Funding = None }
+           
     let rec caller_input() =
         printfn "What organization did you first contact for help?"
         let resp = Console.ReadLine().Trim().ToUpper()
@@ -26,7 +32,8 @@ module ReportBuilder =
         match input with
         | "help" -> Helped
         | "not helped" -> NotHelped 
-        | "referred to another org" -> Outcome.RefToNextNgo
+        | "referred to another org" -> let ngo = createNgo " "
+                                       RefToNextNgo(caller_input(), ngo)
         | _ -> printfn "invalid entry"
                caller_input()
 
@@ -40,12 +47,12 @@ module ReportBuilder =
         | "N" -> NoFollowup
         | _ -> printfn "%s is an Invalid Entry" resp
                followup()
-
-    and referral():RefToNextNgo =
+(*
+    and referral():Referral =
         let n = caller_input()
         let f = followup()
         RefToNextNgo(n, f)
-
+*)
 
 
 
