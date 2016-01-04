@@ -26,7 +26,7 @@ module Types =
             | Individual of string
             | Org of string
 
-        and Outcome =
+        type Outcome =
             | Helped // Terminal case #1
             | NotHelped // Terminal case #2
             | RefToNextNgo of Outcome * NGO //Caller will be prompted for help info again

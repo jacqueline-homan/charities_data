@@ -23,17 +23,19 @@ let rec caller (c:Caller) =
     | Individual(c) -> (calls) |> List.sort |> List.ofSeq
     | Org(c) -> (calls) |> List.sort |> List.ofSeq
                 
+
+
                   
 let result = firstNgo_input()
 match result with
-| Helped -> printfn "Caller was helped" |> exit 0
-| NotHelped -> printfn "Caller was not helped" |> exit 0
+| Helped -> printfn "Caller was helped" 
+| NotHelped -> printfn "Caller was not helped" 
 | RefToNextNgo (ngo, name) -> printfn " Caller not helped and referred to next NGO"
 
 let next_result = nextNgo_input()
 match next_result with
-| Helped -> printfn "helped" |> exit 0
-| NotHelped -> printfn "not helped" |> exit 0
+| Helped -> printfn "helped" 
+| NotHelped -> printfn "not helped" 
 | RefToNextNgo (outcome, ngo) -> printfn "referred" 
                                
 
