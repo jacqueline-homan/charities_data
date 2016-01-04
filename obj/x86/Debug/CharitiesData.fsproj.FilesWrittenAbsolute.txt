@@ -4,3 +4,4 @@
 /Users/admin/Projects/CharitiesData/CharitiesData/obj/x86/Debug/CharitiesData.exe
 /Users/admin/Projects/CharitiesData/CharitiesData/obj/x86/Debug/CharitiesData.exe.mdb
 /Users/admin/Projects/CharitiesData/CharitiesData/bin/Debug/FSharp.Data.dll
+/Users/admin/Projects/CharitiesData/CharitiesData/bin/Debug/Newtonsoft.Json.dll

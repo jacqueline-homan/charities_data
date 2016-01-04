@@ -22,8 +22,9 @@ module ReportBuilder =
           City = "";
           State = "";
           Funding = None }
+
            
-    let rec caller_input() =
+    let rec firstNgo_input() =
         printfn "What organization did you first contact for help?"
         let resp = Console.ReadLine().Trim().ToUpper()
         printfn "What was the outcome?\n"
@@ -33,9 +34,23 @@ module ReportBuilder =
         | "help" -> Helped
         | "not helped" -> NotHelped 
         | "referred to another org" -> let ngo = createNgo " "
-                                       RefToNextNgo(caller_input(), ngo)
+                                       RefToNextNgo(nextNgo_input(), ngo)
         | _ -> printfn "invalid entry"
-               caller_input()
+               firstNgo_input()
+
+    and nextNgo_input() =
+        printfn " Which NGO were you referred to?"
+        let res = Console.ReadLine().Trim().ToUpper()
+        printfn "Did %s help, not help, or refer you to another NGO?" res
+        let inp = Console.ReadLine().Trim().ToLower()
+        match inp with
+        | "help" -> Helped
+        | "not help" -> NotHelped
+        | "refer" -> let nextNgo = createNgo " "
+                     RefToNextNgo(nextNgo_input(), nextNgo)
+        | _ -> printfn "Invalid entry: Please enter 'help', not help', or 'refer': "
+               nextNgo_input()
+                    
 
     let rec followup()=
         printfn "Did a caseworker follow up with you after\n"
@@ -47,12 +62,11 @@ module ReportBuilder =
         | "N" -> NoFollowup
         | _ -> printfn "%s is an Invalid Entry" resp
                followup()
-(*
-    and referral():Referral =
-        let n = caller_input()
-        let f = followup()
-        RefToNextNgo(n, f)
-*)
+
+    
+
+
+
 
 
 

@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="CharitiesData.fsproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ReportBuilder.fs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.fs">
     <Files>
-      <File FileName="Program.fs" Line="12" Column="17" />
-      <File FileName="TypesFile.fs" Line="31" Column="24" />
-      <File FileName="ReportBuilder.fs" Line="29" Column="48" />
+      <File FileName="Program.fs" Line="8" Column="1" />
+      <File FileName="TypesFile.fs" Line="38" Column="32" />
+      <File FileName="ReportBuilder.fs" Line="51" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
