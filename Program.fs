@@ -23,23 +23,21 @@ let rec caller (c:Caller) =
     | Individual(c) -> (calls) |> List.sort |> List.ofSeq
     | Org(c) -> (calls) |> List.sort |> List.ofSeq
                 
-
-
-//Unsure how to deconstruct the last line, it corresponds to
-// the code in line 36 in ReportBuilder
-let rec help(h:Outcome) =
-    match h with
-    | Helped -> printfn "Caller was helped"
-    | NotHelped -> printfn "Caller was not helped"
-    | RefToNextNgo (ngo, name) -> printfn " Caller not helped and referred to next NGO"
-                              
-
-(*
-let total_callers(tc) acc i = 
-    acc + i
-*)
                   
+let result = firstNgo_input()
+match result with
+| Helped -> printfn "Caller was helped" |> exit 0
+| NotHelped -> printfn "Caller was not helped" |> exit 0
+| RefToNextNgo (ngo, name) -> printfn " Caller not helped and referred to next NGO"
 
+let next_result = nextNgo_input()
+match next_result with
+| Helped -> printfn "helped" |> exit 0
+| NotHelped -> printfn "not helped" |> exit 0
+| RefToNextNgo (outcome, ngo) -> printfn "referred" 
+                               
+
+                    
 
 [<EntryPoint>]
 let main argv = 
@@ -47,7 +45,7 @@ let main argv =
 
     let n name = (createNgo) 
                  
-    let h = (help)
+
    
 (*
 

@@ -35,7 +35,7 @@ module ReportBuilder =
         | "not helped" -> NotHelped 
         | "referred to another org" -> let ngo = createNgo " "
                                        RefToNextNgo(nextNgo_input(), ngo)
-        | _ -> printfn "invalid entry"
+        | _ -> printfn "invalid entry: %A" input
                firstNgo_input()
 
     and nextNgo_input() =
@@ -48,8 +48,8 @@ module ReportBuilder =
         | "not help" -> NotHelped
         | "refer" -> let nextNgo = createNgo " "
                      RefToNextNgo(nextNgo_input(), nextNgo)
-        | _ -> printfn "Invalid entry: Please enter 'help', not help', or 'refer': "
-               nextNgo_input()
+        | _ -> printfn "Invalid entry %A: Please enter 'help', not help', or 'refer': " inp
+               nextNgo_input() 
                     
 
     let rec followup()=
